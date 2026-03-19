@@ -1,0 +1,73 @@
+.sep {
+  height: 4px;
+  background: var(--yellow);
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2.5rem;
+}
+
+.section-tag {
+  font-family: 'Syne Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Special Elite', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 3rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+.step {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.step:last-child {
+  border-right: none;
+}
+
+.step:hover {
+  background: rgba(245,166,35,0.04);
+}
+
+.step-num {
+  font-family: 'Syne Mono', monospace;
+  font-size: 3rem;
+  color: rgba(245,166,35,0.15);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--yellow);
+  margin-bottom: 0.75rem;
+}
+
+.step p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+}

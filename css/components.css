@@ -1,0 +1,256 @@
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.prize-card {
+  background: var(--dark);
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.prize-card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-4px);
+}
+
+.prize-hours {
+  font-family: 'Special Elite', serif;
+  font-size: 4rem;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.prize-hours-label {
+  font-family: 'Syne Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.prize-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1.5rem 0;
+}
+
+.prize-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.prize-items li {
+  font-size: 0.88rem;
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.prize-items li::before {
+  content: '→';
+  color: var(--yellow);
+  font-family: 'Syne Mono', monospace;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+.req-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.req-list {
+  list-style: none;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.req-item:last-child {
+  border-bottom: none;
+}
+
+.req-item:hover {
+  background: rgba(245,166,35,0.04);
+}
+
+.req-num {
+  font-family: 'Syne Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--yellow);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.req-item p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.req-callout {
+  background: var(--yellow);
+  color: var(--darker);
+  padding: 3rem 2.5rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.req-callout h3 {
+  font-family: 'Special Elite', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.req-callout p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  opacity: 0.8;
+}
+
+.req-callout .big-num {
+  font-family: 'Special Elite', serif;
+  font-size: 5rem;
+  line-height: 1;
+  opacity: 0.2;
+  display: block;
+  margin-top: 1rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  gap: 2rem;
+  transition: color 0.15s;
+}
+
+.faq-q:hover {
+  color: var(--yellow);
+}
+
+.faq-icon {
+  font-family: 'Syne Mono', monospace;
+  font-size: 1.2rem;
+  color: var(--yellow);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+}
+
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding-bottom: 1.5rem;
+}
+
+.faq-a p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 700px;
+}
+
+footer {
+  background: var(--dark);
+  border-top: 4px solid var(--yellow);
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  font-family: 'Special Elite', serif;
+  font-size: 1.5rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-brand span {
+  display: block;
+  font-family: 'Syne Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.footer-url {
+  font-family: 'Syne Mono', monospace;
+  font-size: 1rem;
+  color: var(--yellow);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--yellow);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.footer-url:hover {
+  opacity: 0.7;
+}
+
+.footer-note {
+  font-family: 'Syne Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-align: right;
+}
