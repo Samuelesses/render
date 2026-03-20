@@ -24,6 +24,19 @@ body {
   overflow-x: hidden;
 }
 
+.top-left-image-link {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 10000;
+}
+
+.top-left-image {
+  display: block;
+  width: 130px;
+  height: auto;
+}
+
 body::before {
   content: '';
   position: fixed;
